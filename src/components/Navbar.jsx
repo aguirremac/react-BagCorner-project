@@ -6,14 +6,33 @@ import { IoMdClose, IoMdHelpCircle} from 'react-icons/io'
 import {FaUserFriends} from 'react-icons/fa'
 import {TbTruckDelivery} from 'react-icons/tb'
 import {BiHappyAlt} from 'react-icons/bi'
+import { data } from '../data/data.js';
 
 const Navbar = () => {
 
-    const [nav, setNav] = useState(false)
+    const [bags, setBags] = useState(data);
+    const [nav, setNav] = useState(false);
+
+
+
+      //search box
+
+  const [searchValue, setSearchValue] = useState('');
+
+  
+
+  // const handleSearchChange = e => {
+  //   setSearchValue(e.target.value)
+  //   setBags (
+  //     data.filter((item) =>{
+  //       return item.category.toLowerCase.indexOf(searchValue) !== -1
+  //     }))}
+  
+
 
 
   return (
-    <div className="max-w-[1640px] mx-auto flex justify-between items-center p-4">
+    <div className="max-w-[1640px] mx-auto flex justify-between items-center p-4 sticky top-0 z-10 bg-white">
      
       {/* left side nav */}
       <div className='flex items-center '>
@@ -25,8 +44,8 @@ const Navbar = () => {
         </h1>
 
         <div className='hidden md:flex items-center bg-gray-200 rounded-full p-1 font-semibold text-[13px] mx-2'>
-          <p className='bg-black rounded-full text-white p-2'>Delivery</p>
-          <p className='px-1'>Pickup</p>
+          <p className='bg-black rounded-full text-white p-2'>Men</p>
+          <p  className='px-1'>Women</p>
         </div>
       </div>
 

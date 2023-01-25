@@ -14,18 +14,13 @@ const Bag = () => {
     );
   };
 
-  //search box
-
-  // const [searchValue, setSearchValue] = useState('');
-
-  // const handleSearchChange = e => {
-  //   setSearchValue(e.target.value)
-  //   setBags (
-  //     data.filter((item) =>{
-  //       return item.category.toLowerCase.indexOf(searchValue) !== -1
-  //     }))}
-  
-
+  const targetType = (target) => {
+    setBags(
+      data.filter((item) => {
+        return item.target === target;
+      })
+    );
+  };
 
 
   //filter by range
@@ -53,7 +48,7 @@ const Bag = () => {
       <p className=" text-center text-2xl md:text-3xl lg:text-4xl font-bold text-green-500">
         Choose Your Style
       </p>
-      <div className="flex flex-col items-center md:flex-row gap-1 w-full h-full">
+      <div className="flex flex-col items-center md:flex-row gap-1 w-full h-full;">
         <div className="w-full p-3">
           <h2 className="text-sm md:text-xl pb-2">Filter Type</h2>
           <div className="flex justify-evenly gap-0.5 text-sm md:text-base lg:text-xl">
@@ -105,7 +100,8 @@ const Bag = () => {
 
       {/* mapped products */}
 
-      <div className="max-w-[1640px] mx-auto p-3 grid grid-cols-2 md:grid-cols-4 gap-8 cursor-pointer">
+      
+        <div className="max-w-[1640px] mx-auto p-3 grid grid-cols-2 md:grid-cols-4 gap-8 cursor-pointer">
         {bags.map((item, index) => (
           <div
             key={index}
@@ -125,6 +121,9 @@ const Bag = () => {
           </div>
         ))}
       </div>
+      
+
+
     </div>
   );
 };

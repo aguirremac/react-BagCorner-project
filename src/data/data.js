@@ -1,6 +1,6 @@
 export const data = [
 { id: 1,
-    name: 'Champ 1',
+    name: 'Champ',
     category: 'Totes',
     target : 'Women',
     price: 300.00,
@@ -147,7 +147,7 @@ export const data = [
 ]
 
 
-export const catergories = [
+export const categories = [
     { id: 1,
         name: 'Totes',
         image: 'https://images.pexels.com/photos/1214212/pexels-photo-1214212.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
@@ -172,7 +172,5 @@ export const catergories = [
 
 
     },
-
-
 
 ]
